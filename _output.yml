@@ -3,7 +3,7 @@ bookdown::bs4_book:
   # split_bib: true
   theme:
     primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
+  repo: https://github.com/GMACS-project/User-manual
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

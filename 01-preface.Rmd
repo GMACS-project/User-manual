@@ -65,11 +65,6 @@ This book is the first place to learn more about how to use Gmacs. Its different
 
 The basic vignette included in the [gmr](https://github.com/seacode/gmacs/tree/develop/gmr) R package provides help for installing the package and an overview of the available functions.
 
-
-## How can I follow/contribute to Gmacs development?{-}
-
-Should we consider the possibility for the user to report bugs or request features through an issue on GitHub, suggest code changes (pull request), or suggest changes to the Stock Synthesis manual.
-
 ## How can I get help?{-}
 
 The first thing to do is to have a look at the Frequently Asked Questions page.
@@ -78,11 +73,13 @@ beyond the FAQ page:
   - Is there an specific email address where people can ask help?
   - Do you want to create a kind of forum?
 
+## How can I follow/contribute to Gmacs development?{-}
+
+Should we consider the possibility for the user to report bugs or request features through an issue on GitHub, suggest code changes (pull request), or suggest changes to the Gmacs manual.
 
 ## How can I report issues?{-}
 
 Post in the Forum or open an issue in the Gmacs repo.
-
 
 ## The Gmacs development team{-}
 
