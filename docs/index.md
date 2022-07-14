@@ -1,5 +1,5 @@
 --- 
-title: "Gmacs: mastering a stock assessment for Crustaceans species"
+title: "Gmacs: mastering a modeling framework to assess Crustacean species"
 author: "Matthieu Veron and the GMACS development Team"
 date: "2022-07-14"
 site: bookdown::bookdown_site
@@ -28,7 +28,7 @@ urlcolor: blue
 
 # Welcome {.unnumbered}
 
-This is the online version of "*Gmacs: mastering a stock assessment for Crustaceans species*", 
+This is the online version of "*Gmacs: mastering a modeling framework to assess Crustacean species*", 
 a user guide book __*currently under development*__ and that aims to merge 
 and synthesize all the current and past work done by the Gmacs development team
 since the inception of this project.
@@ -41,11 +41,18 @@ today (e.g., [Stock Synthesis](https://vlab.noaa.gov/web/stock-synthesis),
 [CASAL](https://niwa.co.nz/fisheries/tools-resources/casal), ...), but there are 
 very few generic size-based, or staged-based models that are used in stock assessment.
 
-Gmacs is an integrated analysis modelling framework designed to develop size-structured
-stock assessment models for crustacean species. Crab stocks of Alaska are managed
-by the North Pacific Fishery Management Council ([NPFMC](http://npfmc.org)). Some 
-stocks are assessed with integrated size-structured assessment models of the
-form described in @punt_review_2013. Currently, most of these stocks are assessed using a stock-specific assessment model (e.g. @zheng_bristol_2014). In this context and with the aim of uniform the assessment process of these species, the Gmacs project aims to provide a software that will allow each stock to be assessed independently but using a single flexible modelling framework.
+The Generalized Model for Assessing Crustacean Stocks (GMACS) is an integrated 
+analysis modelling framework designed to develop size-structured stock assessment 
+models for crustacean species. 
+
+Crab stocks of Alaska are managed by the North Pacific Fishery Management Council 
+([NPFMC](http://npfmc.org)). Some stocks are assessed with integrated size-structured 
+assessment models of the form described in @punt_review_2013. Currently, most of
+these stocks are assessed using a stock-specific assessment model 
+(e.g. @zheng_bristol_2014). In this context and with the aim of uniform the 
+assessment process of these species, the Gmacs project aims to provide a software 
+that will allow each stock to be assessed independently but using a single flexible 
+modelling framework.
 
 This book is designed to take you from knowing nothing about Gmacs and its utilities 
 
