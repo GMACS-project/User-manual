@@ -88,15 +88,20 @@ Table \@ref(tab:contr) summarizes the people who have worked on the Gmacs projec
 Table:(\#tab:contr) Gmacs development team - Contributors.
 
 
-|Contributors          |Organisation                                                      |
-|:---------------------|:-----------------------------------------------------------------|
-|**Jim Ianelli**       |Alaska Fisheries Science center - NOAA                            |
-|**D'Arcy Webber**     |Quantfish                                                         |
-|**Cody Szuwalski**    |Alaska Fisheries Science center - NOAA                            |
-|**Jack Turnock**      |Alaska Fisheries Science center - NOAA                            |
-|**Jie Zheng**         |Alaska Department of Fish and Game                                |
-|**Hamachan Hamazaki** |Alaska Department of Fish and Game                                |
-|**Athol Whitten**     |School of Aquatic and Fishery Sciences - University of Washington |
-|**Andre Punt**        |School of Aquatic and Fishery Sciences - University of Washington |
-|**David Fournier**    |Otter Research Ltd.                                               |
-|**John Levitt**       |                                                                  |
+\begin{tabular}{ll}
+\toprule
+Contributors & Organisation\\
+\midrule
+**Jim Ianelli** & Alaska Fisheries Science center - NOAA\\
+**D'Arcy Webber** & Quantfish\\
+**Cody Szuwalski** & Alaska Fisheries Science center - NOAA\\
+**Jack Turnock** & Alaska Fisheries Science center - NOAA\\
+**Jie Zheng** & Alaska Department of Fish and Game\\
+\addlinespace
+**Hamachan Hamazaki** & Alaska Department of Fish and Game\\
+**Athol Whitten** & School of Aquatic and Fishery Sciences - University of Washington\\
+**Andre Punt** & School of Aquatic and Fishery Sciences - University of Washington\\
+**David Fournier** & Otter Research Ltd.\\
+**John Levitt** & \\
+\bottomrule
+\end{tabular}
