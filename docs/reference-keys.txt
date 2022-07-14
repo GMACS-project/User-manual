@@ -15,3 +15,4 @@ run-plot
 first-gmacs
 sad
 faq
+csl-chicago-fullnote-bibliography.csl
