@@ -2,7 +2,93 @@
 
 ### Summary of Data File content
 
-### Units of mesure
+Input data are contained in a text-based data file referred to as the "dat" file (because the standard extension for this file 
+is ".dat"). Conceptually, the dat file consists of several major subsections:
+
+  - the header
+  - fishery catch (abundance/biomass) time series data
+  - index catch (relative abundance/biomass) time series data 
+  - size frequency data
+  - growth data
+  - other data (tagging, male maturity data, ??)
+
+Comments in the dat file are prefaced with the "#" symbol. Values are separated by spaces or tabs. Character-based 
+input (e.g., fleet names, etc.) should not contain spaces, tabs, or "#" (but can contain numbers and punctuation).
+
+#### the header 
+
+The header portion of the dat file is structured as in the following example:
+
+    1982    # Start    year                    
+    2021    # End    year                    
+    3    # Number of seasons                        
+    2    # Number of fleets (fishing fleets and surveys)                        
+    2    # Number of sexes                        
+    2    # Number of shell condition types                        
+    2    # Number of maturity types                        
+    32   # Number of size-classes                    
+    3    # Season recruitment occurs                        
+    3    # Season molting and growth occurs                        
+    3    # Season to calculate SSB                        
+    1    # Season for N output                        
+    # maximum size-class (males then females)                            
+    32  #--males                            
+    22  #--females                            
+    # size_breaks (a vector giving the break points between size "intervals," dim=nclass+1)                            
+    24.5    29.5    34.5    39.5    44.5    49.5    54.5    59.5    64.5    69.5    74.5    79.5    84.5    89.5    94.5    99.5    104.5    109.5    114.5    119.5    124.5    129.5    134.5    139.5    144.5    149.5    154.5    159.5    164.5    169.5    174.5    179.5    184.5                             
+    # Natural mortality per season input type                           
+    1    # 1=vector by "season", 2= matrix by season/year
+    # Proportion of the total natural mortality to be applied each season   [given in order of season]
+    0.625  0.0  0.375 #--Seasons 1, 2, 3, respectively                            
+    # Fishing fleet names (delimited with spaces; no spaces in names) [order determines fleet number]                             
+    TCF                            
+    # Survey names (delimited with spaces; no spaces in names)        [order determines fleet number]                           
+    NMFS_Trawl                    
+    # Are the seasons instantaneous (0) or continuous (1)  [given in order of season]                          
+    0 #--Season 1                       
+    0 #--Season 2            
+    0 #--Season 3
+
+Note that all text on a line following a "#" in the example above is regarded as a comment and ignored by GMACS when reading the file. 
+Values can be given on the same line or on subsequent lines, but the order is critical. 
+
+The model time period is a contiguous time block, specified by start and end years. The number of seasons (*nSeasons*) determines the number of time blocks 
+a year is broken into. The number of fleets reflects the total number of distinct fishing fleets and surveys represented in the model. Similarly,
+the number of sexes (*nX*), shell condition types (*nS*), and maturity types (*nM*) should reflect the number of distinct versions of those 
+categories represented in the model. Currently, GMACS supports at most two sexes 
+(male, female), two maturity types (immature, mature) and two shell types (new shell, old shell). The minimum number for each of these 
+categories is 1 (e.g., "male-only" or "combined"). The number of size classes (*nZ*) is reflects the number of categories used to classify animals by size 
+in the model, but is otherwise an arbitrary integer.
+
+The season at which recruitment occurs is an integer indicating which season (1-*nSeasons*) during the year recruitment is added into the 
+population numbers-at-size/sex/maturity type/shell type. Similarly, the seasons at which molting and growth occur, SSB is calculated, and 
+population numbers-at-size/sex/maturity type/shell type are output are given as indicators (????: for continuous seasons, at what point within the season do
+these occur?).
+
+The maximum size class is a sex-specific vector indicating the indices of the maximum size class occupied by the associated sex (males, then females in 
+a two-sex model). The model size classes are specified by a *nZ*+1-element vector (the *size-breaks*) giving the cutpoints for the size bins.
+
+The manner in which the fraction of annual season-specific natural mortality is specified is given next, with "1" indicating it will be specified 
+as a vector applying equally to all years while "2" indicates it will be specified by season (columns) by individual year (rows). 
+The values of the fractions are given next.
+
+The fleet names are given next, with the names of the fishing fleets given first, then the names of the surveys. The order given here determines 
+the (ones-based) index used to refer to fleets later in the file.
+
+Finally, a vector of integers indicating whether each season is instantaneous (0) or continuous (1) is given.
+
+#### fishery catch (abundance/biomass) time series data
+
+#### index catch (relative abundance/biomass) time series data 
+
+#### size frequency data
+
+#### growth data
+
+#### other data (tagging, male maturity data, ??)
+
+
+### Units of measure
   
   - Body size
   - Catch biomass

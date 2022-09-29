@@ -1,1 +1,0 @@
-# Building your first Assessment{#first-gmacs}
